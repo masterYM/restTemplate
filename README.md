@@ -4,7 +4,7 @@
 ```
 //---------------cookie怎么传-----------------------
         HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);//表单形式
         
         List<String> cookies = new ArrayList<>();
         cookies.add("cookieName=" + cookie);
