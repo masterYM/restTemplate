@@ -67,6 +67,20 @@ public class Run {
 //        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, requestEntity, String.class);
         ResponseEntity<String> response = restTemplate.postForEntity(url, requestEntity , String.class );
 
+        /*
+        headers.add("authorization",Auth);
+        headers.setContentType(MediaType.APPLICATION_JSON);//json形式
+
+        JSONObject content = new JSONObject();//放入body中的json参数
+        content.put("parm1","parm1");
+        content.put("parm2",parm2);
+
+        HttpEntity<JSONObject> request = new HttpEntity<>(content,headers); //组装
+
+        ResponseEntity<String> response = template.exchange(url,HttpMethod.POST,request,String.class);
+         *
+         */
+
         System.out.println(response.getBody());
         return response.getBody();
     }
