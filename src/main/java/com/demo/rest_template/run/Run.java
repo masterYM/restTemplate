@@ -24,7 +24,7 @@ public class Run {
      */
     @RequestMapping(value = "/login",method = RequestMethod.GET)
     public String run(HttpServletResponse res){
-        String url = "http://47.106.164.211:10080/web/Home/User/loginPost";
+        String url = "http://localhost:10080/web/User/loginPost";
         HttpHeaders headers = new HttpHeaders();
 
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
@@ -41,7 +41,7 @@ public class Run {
         List<String> list = response.getHeaders().get("Set-Cookie");
         String string = list.get(0);
         String c = string.substring(string.indexOf("=")+1,string.indexOf(";"));
-        Cookie cookie = new Cookie("PHPSESSID",c);
+        Cookie cookie = new Cookie("cookieName",c);
         cookie.setMaxAge(3600*24*3);
         res.addCookie(cookie);
 
