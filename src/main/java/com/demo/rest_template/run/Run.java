@@ -24,7 +24,7 @@ public class Run {
      */
     @RequestMapping(value = "/login",method = RequestMethod.GET)
     public String run(HttpServletResponse res){
-        String url = "http://localhost:10080/web/User/loginPost";
+        String url = "http://localhost:10080/web/Home/User/loginPost";
         HttpHeaders headers = new HttpHeaders();
 
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
